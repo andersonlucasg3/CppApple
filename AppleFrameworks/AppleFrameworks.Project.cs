@@ -1,5 +1,6 @@
 using AppleFrameworks.Foundation;
 using AppleFrameworks.Metal;
+using Shared.Platforms;
 using Shared.Projects;
 
 namespace AppleFrameworks.Projects;
@@ -12,7 +13,7 @@ public class AppleFrameworksProject : AProjectDefinition
 
     protected override void Configure()
     {
-        AddModule<FoundationModule>();
+        AddModuleToGroup<FoundationModule>(ETargetPlatformGroup.Apple);
         // AddModule<MetalModule>();
     }
 }
