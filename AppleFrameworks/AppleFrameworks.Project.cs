@@ -4,7 +4,7 @@ using Shared.Projects;
 
 namespace AppleFrameworks.Projects;
 
-public class AppleFrameworksProject : ProjectDefinition
+public class AppleFrameworksProject : AProjectDefinition
 {
     public override string Name => "AppleFrameworks";
 
@@ -13,6 +13,6 @@ public class AppleFrameworksProject : ProjectDefinition
     protected override void Configure()
     {
         AddModule<FoundationModule>();
-        AddModule<MetalModule>();
+        // AddModule<MetalModule>();
     }
 }

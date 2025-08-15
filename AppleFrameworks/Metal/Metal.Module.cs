@@ -3,7 +3,7 @@ using Shared.Projects;
 
 namespace AppleFrameworks.Metal;
 
-public class MetalModule : ModuleDefinition
+public class MetalModule : AModuleDefinition
 {
     public override EModuleBinaryType BinaryType => EModuleBinaryType.DynamicLibrary;
 
@@ -11,7 +11,7 @@ public class MetalModule : ModuleDefinition
 
     public override string SourcesRoot => "Sources";
 
-    protected override void Configure(ProjectDefinition InOwnerProject)
+    protected override void Configure()
     {
         AddCompilerDefinition(ETargetPlatform.Any, "METAL_ENABLED");
 

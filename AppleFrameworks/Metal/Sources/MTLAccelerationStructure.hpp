@@ -24,7 +24,7 @@
 #include "MTLHeaderBridge.hpp"
 #include "MTLPrivate.hpp"
 
-#include "Foundation.hpp"
+#include "Foundation.h"
 
 #include "MTLAccelerationStructure.hpp"
 #include "MTLAccelerationStructureTypes.hpp"

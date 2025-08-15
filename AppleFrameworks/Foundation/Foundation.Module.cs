@@ -2,7 +2,7 @@ using Shared.Projects;
 
 namespace AppleFrameworks.Foundation;
 
-public class FoundationModule : ModuleDefinition
+public class FoundationModule : AModuleDefinition
 {
     public override EModuleBinaryType BinaryType => EModuleBinaryType.DynamicLibrary;
 
@@ -10,7 +10,7 @@ public class FoundationModule : ModuleDefinition
 
     public override string SourcesRoot => "Sources";
 
-    protected override void Configure(ProjectDefinition InOwnerProject)
+    protected override void Configure()
     {
         PlatformSpecifics.Mac.AddFrameworkDependencies(
             "Foundation"
