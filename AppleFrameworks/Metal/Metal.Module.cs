@@ -9,8 +9,6 @@ public class MetalModule : AModuleDefinition
 
     public override string Name => "Metal";
 
-    public override string SourcesRoot => "Sources";
-
     protected override void Configure()
     {
         AddCompilerDefinition(ETargetPlatform.Any, "METAL_ENABLED");

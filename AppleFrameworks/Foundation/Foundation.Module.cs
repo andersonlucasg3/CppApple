@@ -8,8 +8,6 @@ public class FoundationModule : AModuleDefinition
 
     public override string Name => "Foundation";
 
-    public override string SourcesRoot => "Sources";
-
     protected override void Configure()
     {
         PlatformSpecifics.Mac.AddFrameworkDependencies(

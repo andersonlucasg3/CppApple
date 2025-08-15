@@ -9,7 +9,7 @@ public class AppleFrameworksProject : AProjectDefinition
 {
     public override string Name => "AppleFrameworks";
 
-    public override string SourcesRoot => ".";
+    protected override string ModulesDirectoryName => ".";
 
     protected override void Configure()
     {
