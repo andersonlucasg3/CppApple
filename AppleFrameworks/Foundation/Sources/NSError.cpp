@@ -20,57 +20,57 @@ _NS_PRIVATE_DEF_CONST(NS::ErrorUserInfoKey, FilePathErrorKey);
 
 namespace NS 
 {
-    _NS_INLINE Error* Error::error(ErrorDomain domain, Integer code, class Dictionary* pDictionary)
+    Error* Error::error(ErrorDomain domain, Integer code, class Dictionary* pDictionary)
     {
         return Object::sendMessage<Error*>(_NS_PRIVATE_CLS(NSError), _NS_PRIVATE_SEL(errorWithDomain_code_userInfo_), domain, code, pDictionary);
     }
 
-    _NS_INLINE Error* Error::alloc()
+    Error* Error::alloc()
     {
         return Object::alloc<Error>(_NS_PRIVATE_CLS(NSError));
     }
 
-    _NS_INLINE Error* Error::init()
+    Error* Error::init()
     {
         return Object::init<Error>();
     }
 
-    _NS_INLINE Error* Error::init(ErrorDomain domain, Integer code, class Dictionary* pDictionary)
+    Error* Error::init(ErrorDomain domain, Integer code, class Dictionary* pDictionary)
     {
         return Object::sendMessage<Error*>(this, _NS_PRIVATE_SEL(initWithDomain_code_userInfo_), domain, code, pDictionary);
     }
 
-    _NS_INLINE Integer Error::code() const
+    Integer Error::code() const
     {
         return Object::sendMessage<Integer>(this, _NS_PRIVATE_SEL(code));
     }
 
-    _NS_INLINE ErrorDomain Error::domain() const
+    ErrorDomain Error::domain() const
     {
         return Object::sendMessage<ErrorDomain>(this, _NS_PRIVATE_SEL(domain));
     }
 
-    _NS_INLINE Dictionary* Error::userInfo() const
+    Dictionary* Error::userInfo() const
     {
         return Object::sendMessage<Dictionary*>(this, _NS_PRIVATE_SEL(userInfo));
     }
 
-    _NS_INLINE String* Error::localizedDescription() const
+    String* Error::localizedDescription() const
     {
         return Object::sendMessage<String*>(this, _NS_PRIVATE_SEL(localizedDescription));
     }
 
-    _NS_INLINE Array* Error::localizedRecoveryOptions() const
+    Array* Error::localizedRecoveryOptions() const
     {
         return Object::sendMessage<Array*>(this, _NS_PRIVATE_SEL(localizedRecoveryOptions));
     }
 
-    _NS_INLINE String* Error::localizedRecoverySuggestion() const
+    String* Error::localizedRecoverySuggestion() const
     {
         return Object::sendMessage<String*>(this, _NS_PRIVATE_SEL(localizedRecoverySuggestion));
     }
 
-    _NS_INLINE String* Error::localizedFailureReason() const
+    String* Error::localizedFailureReason() const
     {
         return Object::sendMessage<String*>(this, _NS_PRIVATE_SEL(localizedFailureReason));
     }
